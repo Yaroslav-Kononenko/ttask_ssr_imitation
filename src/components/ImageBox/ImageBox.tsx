@@ -13,12 +13,17 @@ export const ImageBox: React.FC = () => {
   const ssrEmulation = async () => {
     const res = await fetch(MAIN_URL);
     const num = await res.json();
-    setIsLoading(false);
     return num;
   }
 
   useEffect(() => {
-    ssrEmulation();
+    const ssrLoading = setInterval( async () => {
+      const result = await ssrEmulation();
+      if (result%2 === 0) {
+        setIsLoading(false);
+        clearInterval(ssrLoading);
+      }
+    }, 1000)
   }, [])
   
   return (
