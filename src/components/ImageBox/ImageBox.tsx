@@ -18,14 +18,13 @@ export const ImageBox: React.FC = () => {
 
   useEffect(() => {
     const ssrLoading = setInterval( async () => {
-      const firstResult = await ssrEmulation();
-      const secondResult = await ssrEmulation();
-      if (firstResult%2 === 0 && secondResult%2 === 0) {
-        setIsLoading(false);
+      const comboPromises = await Promise.all([ssrEmulation(), ssrEmulation()]);
+      if (comboPromises.every((result) => result%2 === 0)) {
         clearInterval(ssrLoading);
+        setIsLoading(false);
       }
-    }, 1000)
-  }, [])
+    }, 2000) 
+  })
   
   return (
     <div className="imagebox">
