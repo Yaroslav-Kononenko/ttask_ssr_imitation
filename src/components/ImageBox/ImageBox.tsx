@@ -18,8 +18,9 @@ export const ImageBox: React.FC = () => {
 
   useEffect(() => {
     const ssrLoading = setInterval( async () => {
-      const result = await ssrEmulation();
-      if (result%2 === 0) {
+      const firstResult = await ssrEmulation();
+      const secondResult = await ssrEmulation();
+      if (firstResult%2 === 0 && secondResult%2 === 0) {
         setIsLoading(false);
         clearInterval(ssrLoading);
       }
