@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/Yaroslav-Kononenko/ttask_ssr_imitation/static/css/main.1ea0afae.css",
-    "main.js": "/Yaroslav-Kononenko/ttask_ssr_imitation/static/js/main.f940a8f0.js",
-    "static/media/disco_dancer.jpg": "/Yaroslav-Kononenko/ttask_ssr_imitation/static/media/disco_dancer.f6090dcccbe0ea0c6fbd.jpg",
-    "static/media/tokyo_girl.jpg": "/Yaroslav-Kononenko/ttask_ssr_imitation/static/media/tokyo_girl.9e1554f5618ae5ebbd54.jpg",
-    "static/media/neon_vibes_man.jpg": "/Yaroslav-Kononenko/ttask_ssr_imitation/static/media/neon_vibes_man.96e84c658bade47488f7.jpg",
-    "index.html": "/Yaroslav-Kononenko/ttask_ssr_imitation/index.html",
-    "main.1ea0afae.css.map": "/Yaroslav-Kononenko/ttask_ssr_imitation/static/css/main.1ea0afae.css.map",
-    "main.f940a8f0.js.map": "/Yaroslav-Kononenko/ttask_ssr_imitation/static/js/main.f940a8f0.js.map"
+    "main.css": "/ttask_ssr_imitation/static/css/main.1ea0afae.css",
+    "main.js": "/ttask_ssr_imitation/static/js/main.ea924c00.js",
+    "static/media/disco_dancer.jpg": "/ttask_ssr_imitation/static/media/disco_dancer.f6090dcccbe0ea0c6fbd.jpg",
+    "static/media/tokyo_girl.jpg": "/ttask_ssr_imitation/static/media/tokyo_girl.9e1554f5618ae5ebbd54.jpg",
+    "static/media/neon_vibes_man.jpg": "/ttask_ssr_imitation/static/media/neon_vibes_man.96e84c658bade47488f7.jpg",
+    "index.html": "/ttask_ssr_imitation/index.html",
+    "main.1ea0afae.css.map": "/ttask_ssr_imitation/static/css/main.1ea0afae.css.map",
+    "main.ea924c00.js.map": "/ttask_ssr_imitation/static/js/main.ea924c00.js.map"
   },
   "entrypoints": [
     "static/css/main.1ea0afae.css",
-    "static/js/main.f940a8f0.js"
+    "static/js/main.ea924c00.js"
   ]
 }
