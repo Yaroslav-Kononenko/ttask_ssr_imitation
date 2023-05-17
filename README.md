@@ -1,2 +1,2 @@
 # Demo Link
-- [DEMO LINK](https://github.com/Yaroslav-Kononenko/ttask_ssr_imitation/)
+- [DEMO LINK](https://yaroslav-kononenko.github.io/ttask_ssr_imitation/)
