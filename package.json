@@ -1,7 +1,7 @@
 {
   "name": "ttask_ssr_imitation",
   "version": "0.1.0",
-  "homepage": "https://github.com/Yaroslav-Kononenko/ttask_ssr_imitation",
+  "homepage": "https://Yaroslav-Kononenko.github.io/ttask_ssr_imitation",
   "private": true,
   "dependencies": {
     "@mate-academy/students-ts-config": "0.0.4",
