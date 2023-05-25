@@ -1,30 +1,32 @@
 import './ImageBox.scss';
 import React, { useState, useEffect } from 'react';
 import { ImageCard } from '../ImageCard';
-import disco_dancer from '../../assets/disco_dancer.jpg';
-import neon_vibes_man from '../../assets/neon_vibes_man.jpg';
-import tokyo_girl from '../../assets/tokyo_girl.jpg';
+import { imgList, MAIN_URL } from '../helpers';
 
 export const ImageBox: React.FC = () => {
-  const [isLoading, setIsLoading] = useState(true);
-  const imgList = [disco_dancer, neon_vibes_man, tokyo_girl];
-  const MAIN_URL = 'https://www.random.org/integers/?num=1&min=1&max=10&col=1&base=10&format=plain&rnd=new';
+  const [isLoading, setIsLoading] = useState<boolean>(true);
 
-  const ssrEmulation = async () => {
-    const res = await fetch(MAIN_URL);
-    const num = await res.json();
-    return num;
+  const req = async (): Promise<number> => {
+    const response = await fetch(MAIN_URL);
+    return await response.json();
   }
 
-  useEffect(() => {
-    const ssrLoading = setInterval( async () => {
-      const comboPromises = await Promise.all([ssrEmulation(), ssrEmulation()]);
-      if (comboPromises.every((result) => result%2 === 0)) {
-        clearInterval(ssrLoading);
+  const ssrEmulation = async () => {
+    try {
+      const responses: number[] = await Promise.all([await req(), await req()]);
+      if (responses.every((num: number) => num % 2 === 0)) {
         setIsLoading(false);
+      } else {
+        await ssrEmulation();
       }
-    }, 2000) 
-  })
+    } catch (error) {
+      alert(`Ooops this error was appeared: ${error}`);
+    }
+  };
+
+  useEffect(() => {
+    ssrEmulation();
+  }, [])
   
   return (
     <div className="imagebox">
